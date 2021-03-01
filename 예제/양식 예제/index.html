@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" list="Days">
+    <datalist id="Days">
+        <option>Monday</option>
+        <option>Tuesday</option>
+        <option>Wednesday</option>
+        <option>Thursday</option>
+        <option>Friday</option>
+        <option>Saturday</option>
+        <option>Sunday</option>
+    </datalist>
+    <select name="fruits" id="fruits-table">
+        <optgroup label="Likes">
+            <option>Apple</option>
+            <option selected>Orange</option>
+            <option value="val_3">Banana</option>
+        </optgroup>
+        <optgroup label="Dislikes">
+            <option label="Mango" value="val_4">
+            <option value="val_5">Fineapple</option>
+        </optgroup>
+    </select>
+    <progress value="0", max="100">N percent</progress>
+    <script>
+        const progress = document.querySelector('progress');
+        const interval = setInterval(function() {
+            progress.value += 1;
+            //if (progress.value >= 100) clearInterval(interval);
+            if (progress.value >= 100) progress.value = 0;
+        }, 10)
+    </script>
+</body>
+</html>
